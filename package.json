@@ -12,7 +12,7 @@
     "url": "git+https://github.com/refinist/vue-use-forward-ref.git"
   },
   "bugs": {
-    "url": "https://github.com/refinist/vue-use-forward-ref/issues"
+    "url": "https://github.com/refinist/vue-forwardref/issues"
   },
   "keywords": [
     "vue",
@@ -42,7 +42,7 @@
     "lint:fix": "pnpm run lint --fix",
     "format": "prettier --cache --write .",
     "prepublishOnly": "pnpm run build",
-    "release": "bumpp && pnpm publish",
+    "release": "bumpp",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
