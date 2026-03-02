@@ -2,18 +2,18 @@
 
 [![npm](https://img.shields.io/npm/v/vue-use-forward-ref.svg?colorA=42b883&colorB=35495e)](https://npmjs.com/package/vue-use-forward-ref) [![Unit Test](https://img.shields.io/github/actions/workflow/status/refinist/vue-use-forward-ref/unit-test.yml?colorA=42b883&colorB=35495e&label=Unit%20Test)](https://github.com/refinist/vue-use-forward-ref/actions/workflows/unit-test.yml) [![codecov](https://img.shields.io/codecov/c/github/refinist/vue-use-forward-ref?colorA=42b883&colorB=35495e)](https://codecov.io/github/refinist/vue-use-forward-ref) [![size](https://img.badgesize.io/https://unpkg.com/vue-use-forward-ref?compression=gzip&labelColor=42b883&color=35495e)](https://unpkg.com/vue-use-forward-ref)
 
-English | [中文](README.zh-CN.md)
+[English](README.md) | 中文
 
-A lightweight Vue 3 composable to forward component ref and merge the child's exposed API onto the parent instance. Parent's ref then exposes both the child's `expose()` and optional extra fields in one place.
+轻量级 Vue 3 组合式 API，用于转发组件 ref，并将子组件的暴露 API 合并到父实例上。父级 ref 会同时暴露子组件的 `expose()` 以及可选的额外字段，统一在一处访问。
 
-## Features
+## 特性
 
-- **Lightweight** – Zero dependencies, minimal footprint
-- **Type Safe** – Full TypeScript support
-- **Simple API** – `useForwardRef(ext?)` returns `{ forwardRef }`, pass it to child's `ref`
-- **Merge with ext** – Optionally merge extra fields onto the parent's exposed object
+- **轻量** – 零依赖，体积小
+- **类型安全** – 完整 TypeScript 支持
+- **简单 API** – `useForwardRef(ext?)` 返回 `{ forwardRef }`，传给子组件的 `ref` 即可
+- **与 ext 合并** – 可选地将额外字段合并到父级暴露对象上
 
-## Installation
+## 安装
 
 ```bash
 # npm
@@ -29,11 +29,11 @@ pnpm add vue-use-forward-ref
 bun add vue-use-forward-ref
 ```
 
-## Basic Usage
+## 基本用法
 
-### Forward child ref to parent
+### 将子组件 ref 转发给父级
 
-Use `forwardRef` as the child's `ref`. The parent's ref (e.g. from a grandparent) will then receive the child's exposed API.
+将 `forwardRef` 作为子组件的 `ref` 使用。父级（例如祖父组件）的 ref 会收到子组件的暴露 API。
 
 ```vue
 <!-- Wrapper.vue -->
@@ -63,9 +63,9 @@ const wrapperRef = useTemplateRef<InstanceType<typeof Child>>('wrapperRef');
 </template>
 ```
 
-### Merge extra fields
+### 合并额外字段
 
-You can merge additional fields onto the exposed object so the parent ref sees both the child's API and your extra data.
+可以将额外字段合并到暴露对象上，使父级 ref 既能访问子组件的 API，也能访问你传入的额外数据。
 
 ```ts
 // types.ts
@@ -113,7 +113,7 @@ const wrapperRef = useTemplateRef<WrapperInstance>('wrapperRef');
 </template>
 ```
 
-## License
+## 许可证
 
 [MIT](./LICENSE)
 
