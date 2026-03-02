@@ -34,10 +34,6 @@ bun add vue-use-forward-ref
 Use `forwardRef` as the child's `ref`. The parent's ref (e.g. from a grandparent) will then receive the child's exposed API.
 
 ```vue
-<template>
-  <Child ref="forwardRef" />
-</template>
-
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useForwardRef } from 'vue-use-forward-ref';
@@ -45,6 +41,10 @@ import Child from './Child.vue';
 
 const { forwardRef } = useForwardRef();
 </script>
+
+<template>
+  <Child ref="forwardRef" />
+</template>
 ```
 
 When a parent mounts this component with `<Wrapper ref="parentRef" />`, `parentRef` will expose the same API as `Child` (whatever `Child` passed to `expose()`).
@@ -54,10 +54,6 @@ When a parent mounts this component with `<Wrapper ref="parentRef" />`, `parentR
 You can merge additional fields onto the exposed object so the parent ref sees both the child's API and your extra data.
 
 ```vue
-<template>
-  <Child ref="forwardRef" />
-</template>
-
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useForwardRef } from 'vue-use-forward-ref';
@@ -71,6 +67,10 @@ const { forwardRef } = useForwardRef({
   }
 });
 </script>
+
+<template>
+  <Child ref="forwardRef" />
+</template>
 ```
 
 The parent's ref will then have both `Child`'s exposed API and `count` / `reset`.
@@ -101,4 +101,4 @@ Must be called in a component's `setup()` (uses `getCurrentInstance()`).
 
 [MIT](./LICENSE)
 
-Copyright (c) 2025-present REFINIST
+Copyright (c) 2026-present REFINIST

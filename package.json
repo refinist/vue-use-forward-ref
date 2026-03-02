@@ -38,6 +38,7 @@
   },
   "scripts": {
     "build": "tsdown",
+    "play": "vite",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
     "format": "prettier --cache --write .",
@@ -65,6 +66,7 @@
     "prettier": "^3.8.1",
     "tsdown": "^0.20.3",
     "typescript": "^5.9.3",
+    "vite": "^7.3.1",
     "vitest": "^4.0.18",
     "vue": "^3.5.21"
   },
