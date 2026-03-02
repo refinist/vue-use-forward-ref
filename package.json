@@ -1,7 +1,7 @@
 {
   "name": "vue-use-forward-ref",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packageManager": "pnpm@10.30.3",
   "description": "A lightweight Vue 3 composable to forward component ref and merge child exposed API onto parent instance",
   "author": "REFINIST",
